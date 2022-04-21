@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 
-export default function Login() {
+export default function Login({update}) {
     const [name, setName] = useState('')
     const [pass, setPass] = useState('')
     const navigate = useNavigate()
@@ -15,9 +15,10 @@ export default function Login() {
     const handleSubmit = () => {
       //send data to back end 
       //get if user is new or old and save it in higher state
+    //   update
       setName('');
       setPass('');
-      navigate('/somewhere/else')
+      navigate('/blogs')
 
     }
   return (
